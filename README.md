@@ -25,9 +25,8 @@ the players of that position actually play on the floor, the most egregious amon
 about *five* other positions combined. In all, a rough visual estimate tells me that, in this
 analysis, roughly one-third of all NBA players wind up in this ‘role player’ position; this
 is problematic, to say the least.
-My aim in this study is two-fold: the first section is concerned with defining better
-positions, while the second will use these positions to determine if there is an ideal
-distribution of player-types on a team.
+
+My aim in this study was initially in two parts - first, redefine player positions using advanced statistics and unsupervised machine learning (namely clustering), second, use these new positions for further analysis and predictive modeling.  Data constraints and other factors led to my inability to truly pursue the latter, but this ended up for the best.  I pivoted to a clustering-based, purely exploratory look at my data, learning a good deal about a variety clustering algorithms, and, most importantly, about basketball analysis.
   
   
 ## Data
