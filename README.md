@@ -37,7 +37,7 @@ Data was pulled from [Basketball Reference](http://basketball-reference.com) - t
 
 The site makes it incredibly easy not only to pull common counting stats for every player in a given season, but also to find the more advanced stats - those that lend a bit more insight into how a player actually spends his time on the floor.
    
-## Model  
+## Clustering  
 ### K-Unspecified
 Clustering is a messy matter to begin with, and was only further complicated, in this study, by the cluster overlap we would almost inherently find, regardless of model selection and parameter tuning.  Our model is built around NBA players, almost none of whom are abjectly *terrible* at any one aspect of the game.  We would expect players from cluster 1 to be at least serviceable when it comes to the skills that players from cluster 2 thrive at, etc.  This fact alone made it hard to quantify success in our clustering, as we would almost expect something like mean silhouette score to have a fairly low cap. 
 
