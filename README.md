@@ -5,8 +5,8 @@
 1. [Abstract](#abstract)  
 2. [Data](#data)  
 3. [Clustering](#clustering)
-    * [K-Unspecified](#kunspecified)
-    * [K-Specified](#kspecified)
+    * [K-Unspecified](#k-unspecified)
+    * [K-Specified](#k-specified)
     
 
   
