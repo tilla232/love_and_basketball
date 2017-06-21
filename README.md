@@ -49,12 +49,12 @@ My final data spanned 911 player-seasons and 53 statistics.
 Clustering is a messy matter to begin with - in this study, its almost enigmatic nature was only exacerbated regardless of model selection and parameter tuning.  Our model is built around NBA players, almost none of whom are abjectly *terrible* at any one aspect of the game.  We would expect players from cluster 1 to be at least serviceable when it comes to the skills that players from cluster 2 thrive at, etc.  This fact alone made it hard to quantify success in my clustering, as we would almost expect something like mean silhouette score to have a fairly low cap. 
 
 ### K-Unspecified
-#### DBSCAN
-#### BIRCH
-#### Affinity Propagation
+#### DBSCAN - [Jupyter Notebook](src/dbscan_optimize.ipynb)
+#### BIRCH - [Jupyter Notebook](src/birch_optimize.ipynb)
+#### Affinity Propagation - [Jupyter Notebook](src/affinity_optimize.ipynb)
 
 ### K-Specified
-#### K-Means
-#### Gaussian Mixture Model
-#### Agglomerative Clustering
+#### K-Means - [Jupyter Notebook](src/kmeans_optimize.ipynb)
+#### Gaussian Mixture Model - [Jupyter Notebook](src/gaussian_optimize.ipynb)
+#### Agglomerative Clustering - [Jupyter Notebook](src/agglomerative_optimize.ipynb)
 
