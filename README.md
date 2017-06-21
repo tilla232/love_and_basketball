@@ -8,11 +8,11 @@
     * [K-Unspecified](#k-unspecified)
         * [DBSCAN](#dbscan)
         * [BIRCH](#birch)
-        * [Affinity Propagation](#affinitypropagation)
+        * [Affinity Propagation](#affinity propagation)
     * [K-Specified](#k-specified)
         * [K-Means](#k-means)
-        * [Gaussian Mixed Model](#gaussianmixturemodel)
-        * [Agglomerative Clustering](#agglomerativeclustering)
+        * [Gaussian Mixture Model](#gaussian mixture model)
+        * [Agglomerative Clustering](#agglomerative clustering)
 
   
 ## Abstract
