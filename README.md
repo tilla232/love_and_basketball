@@ -31,23 +31,20 @@ My aim in this study was initially in two parts - first, redefine player positio
   
 ## Data
   
-Data was pulled from [Basketball Reference](http://basketball-reference.com) - the site has a handy 'Get Table as CSV' option which made pulling/using this data a snap: 
+Most of my data was pulled from [Basketball Reference](http://basketball-reference.com) - the site has a handy 'Get Table as CSV' option which made pulling the data a snap: 
 ![basketball reference](https://github.com/tilla232/dsi_capstone/blob/master/img/bbref.png?raw=true)  
 
-The site makes it incredibly easy not only to pull common counting stats for every player in a given season, but also to find the more advanced stats - those that lend a bit more insight into how a player actually spends his time on the floor.
+I pulled not only per 36 minutes stats, but also advanced stats for each qualified player-season over the last 3 years.  A player-season was qualified if the player played at least 50 games and at least 10 minutes/game for that season.  Both the playing time constraint and the 3 season constraint were fairly restrictive, but ultimately necessary.  The playing time minimum was needed to limit noise, while the 3 season limit was intended to ensure my models would capture the positions of *today's* game.  
+  
+To bolster my data, I also used [ProBasketball API](https://probasketballapi.com/) to get data for a number of tracking statistics - total touches per game, distance covered per game, etc.  
+
+My final data spanned 911 player-seasons and 53 statistics.  
    
 ## Clustering  
-### K-Unspecified
-Clustering is a messy matter to begin with, and was only further complicated, in this study, by the cluster overlap we would almost inherently find, regardless of model selection and parameter tuning.  Our model is built around NBA players, almost none of whom are abjectly *terrible* at any one aspect of the game.  We would expect players from cluster 1 to be at least serviceable when it comes to the skills that players from cluster 2 thrive at, etc.  This fact alone made it hard to quantify success in our clustering, as we would almost expect something like mean silhouette score to have a fairly low cap. 
+Clustering is a messy matter to begin with - in this study, its almost enigmatic nature was only exacerbated regardless of model selection and parameter tuning.  Our model is built around NBA players, almost none of whom are abjectly *terrible* at any one aspect of the game.  We would expect players from cluster 1 to be at least serviceable when it comes to the skills that players from cluster 2 thrive at, etc.  This fact alone made it hard to quantify success in my clustering, as we would almost expect something like mean silhouette score to have a fairly low cap. 
 
-I was initially using roughly 20 features to cluster upon, and decided some dimensionality reduction could help improve my model's performance.  After some tinkering with sklearn's PCA class, I quickly realized that a dramatic reduction in dimension (n_components = 2) was drastically boosting my silhouette scores, but producing a set of clusters where some made perfect sense, but others were...hard to explain, from a basketball standpoint.   
-![cluster snippet](https://github.com/tilla232/dsi_capstone/blob/master/img/cluster_snippet.png?raw=true)  
-  
- 
-I suspected that such intense dimension reduction was making my clustering model cluster based on overall contribution - in a sense, the PCA was effectively calculating an overall performance metric (stats like VORP, WS, BPM, etc.) on the fly; this was decidedly *not* what I was trying to accomplish.  
-  
-  
-~~While these clusters made sense to me, I wanted to quantify them *somehow*, for the sake of both science as well as sanity-checking...I obtained simple numerical data (mean and range) for each feature, for each cluster - this also proved useful in *qualifying* each cluster, as it becamse immediately apparent what skills each cluster exemplified.~~
+### K-Unspecified
+
 
 ### K-Specified
 
