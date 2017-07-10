@@ -1,5 +1,6 @@
   
-# A Winning Formula    
+# A Winning Formula  
+Note: This repo is still (very much) under construction!  Optimizations for some of the clustering methods used in this study can be found in jupyter notebooks in the src directory, along with a number of python scripts used to pull data.
 
 ## Table of Contents  
 1. [Abstract](#abstract)  
